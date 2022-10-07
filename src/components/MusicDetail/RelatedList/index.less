@@ -1,0 +1,54 @@
+.related-item {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 5px;
+
+    .related-pic {
+        position: relative;
+
+        .icon-cover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-74%, -68%);
+            display: flex;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--tip-color);
+            z-index: 1;
+            border-radius: 50%;
+            .anticon-caret-right {
+                color: rgb(228, 228, 228);
+                font-size: 16px;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-image {
+        margin-right: 10px;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    .related-info {
+        .related-name {
+            margin-bottom: 5px;
+        }
+
+        .related-artist {
+            display: flex;
+            align-items: center;
+            font-size: .9em;
+            color: var(--tip-color);
+        }
+    }
+}

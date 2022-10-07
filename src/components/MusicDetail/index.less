@@ -1,0 +1,124 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.music-detail {
+    position: fixed;
+    z-index: 5;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    height: calc(100vh - var(--footer-height) - var(--header-height));
+    transition: all 1s ease;
+    overflow: auto;
+    background-color: #f9f9f9;
+
+    &.detail-show {
+        top: var(--header-height);
+    }
+
+    .detail-cover {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .detail-header {
+        display: flex;
+        margin-bottom: 20px;
+
+        .detail-h-wrap {
+            position: relative;
+            padding: 0 100px 0 150px;
+
+            .cd-bar {
+                width: 110px;
+                height: 160px;
+                position: relative;
+                left: 50%;
+                transform: translate(-15px);
+
+                .ant-image:first-of-type {
+                    width: 25px;
+                    height: auto;
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .play-bar {
+                    transform: rotate(-35deg);
+                    transform-origin: 0 0;
+                    left: 3px;
+                    transition: all .5s;
+
+                    &.play {
+                        transition: all .5s;
+                        transform: rotate(0)
+                    }
+                }
+            }
+
+            .detail-h-circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -75px;
+                background-color: #1C1D20;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 10px solid #e4e0e0;
+
+                .circle-cover {
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    border: 5px solid #000;
+                    background-color: rgba(0, 0, 0, .5);
+                    overflow: hidden;
+                    animation: rotate 10s linear infinite;
+                    animation-play-state: paused;
+
+                    &.play {
+                        animation-play-state: running;
+                    }
+                }
+            }
+        }
+
+        .detail-lyric {
+            flex: 1;
+        }
+    }
+
+    .detail-info {
+        display: flex;
+
+        .detail-comment {
+            flex: 1;
+        }
+
+        .detail-related {
+            width: 300px;
+        }
+    }
+
+    .detail-related {
+        .related-title {
+            padding-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@text-color: #7c7c7c;
+
+
+.music-table {
+    color: @text-color;
+
+    .table-index {
+        color: var(--tip-color);
+    }
+
+    // 歌名
+    .music-title {
+        display: flex;
+        align-items: center;
+        .download-icon {
+            font-size: 16px;
+            color: var(--tip-color);
+            margin-right: 5px;
+            &:hover {
+                color: @text-color;
+            }
+        }
+        .icon-vip {
+            width: 25px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8em;
+            color: #fff;
+            height: 15px;
+            margin-left: 4px;
+            background-color: var(--primary-color);
+        }
+    }
+    .music-name,.music-author {
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+
+    .text-gray {
+        color: @text-color;
+    }
+
+    .ant-table-tbody>tr.ant-table-row:hover>td {
+        background-color: #F2F2F3;
+    }
+
+
+
+    .ant-table-tbody .ant-table-row:nth-child(odd) {
+        background-color: #F9F9F9;
+    }
+
+    .ant-table-thead>tr>th {
+        background-color: #fff;
+        color: @text-color;
+    }
+
+    .ant-table-tbody>tr>td,
+    .ant-table-thead>tr>th {
+        border: 0;
+        padding: 10px 5px;
+    }
+}

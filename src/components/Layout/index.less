@@ -1,0 +1,21 @@
+.layout {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .middle {
+        display: flex;
+        width: 100vw;
+        height: calc(100vh - var(--header-height));
+        overflow: auto;
+
+        .content {
+            // margin-left: var(--sider-width);
+            min-width: 980px;
+            padding: 20px;
+            overflow: auto;
+            flex: 1;
+            height: calc(100vh - var(--header-height) - var(--footer-height));
+        }
+    }
+}

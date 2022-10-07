@@ -1,0 +1,78 @@
+.search-box {
+    width: 160px;
+    position: relative;
+    .search-title {
+        padding: 15px 15px 0 15px;
+        .anticon {
+            margin-left: 4px;
+            color: var(--tip-color);
+            &:hover {
+                color: #000;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .history-words {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 20px 0 20px;
+
+        .history-word {
+            padding: 5px 15px;
+            margin: 0 10px 10px 0;
+            border: 1px solid #d9d9d9;
+            border-radius: 20px;
+            font-size: .9em;
+            cursor: pointer;
+            line-height: 16px;
+
+            &:hover {
+                background-color: var(--tip-color);
+            }
+        }
+    }
+
+
+    .search-input {
+        color: #fff;
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 20px;
+
+        input {
+            background-color: var(--primary-color);
+            color: #fff;
+
+            &::-webkit-input-placeholder {
+                color: #fff;
+                font-size: 10px;
+            }
+        }
+    }
+
+    .search-block {
+        position: absolute;
+        top: var(--header-height);
+        background-color: #fff;
+        width: 360px;
+        height: 450px;
+        overflow-y: scroll;
+        border-radius: 5px;
+        border: 1px solid var(--text-gray-color);
+        z-index: 10;
+
+        .serach-word {
+            .hot-item:nth-of-type(-n+3) {
+                .item-index {
+                    color: var(--primary-color);
+                    font-weight: 700;
+                }
+
+                .item-name {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

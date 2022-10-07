@@ -1,0 +1,30 @@
+.sider-bar {
+    width: var(--sider-width);
+    flex-basis: var(--sider-width);
+    text-decoration: none;
+    padding: 10px 10px 0;
+    z-index: 3;
+    min-width: 200px;
+
+    .ant-menu {
+        color: var(--text-color)
+    }
+
+    .ant-menu-item {
+        a {
+            color: #000;
+        }
+
+        &.ant-menu-item-selected:nth-child(-n+5) {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        &.ant-menu-item-selected,
+        &:hover {
+            color: var(--text-active-color);
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+
+}

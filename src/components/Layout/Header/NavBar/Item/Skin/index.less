@@ -1,0 +1,40 @@
+.skin {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    left: -150px;
+    z-index: 11;
+    padding: 0 10px;
+    opacity: 0;
+    box-shadow: 0px 0px 1px #888888;
+    transition: 1s all;
+    &.skin-show {
+        transition: 1s all;
+        opacity: 1;
+    }
+    .skin-title {
+        font-size: 14px;
+        font-weight: 700;
+        height: 20px;
+        line-height: 20px;
+        border-bottom: 2px solid var(--primary-color);
+        width: 50px;
+        text-align: center;
+        margin-left: 5px;
+    }
+    .skin-cover {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 5px;
+        justify-content: space-between;
+        .skin-block {
+            flex-basis: 30%;
+            height: 80px;
+            
+            &:nth-child(n+4) {
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    background-color: var(--primary-color);
+    z-index: 10;
+    /* overflow: auto; */
+    width: 100%;
+    min-width: var(--main-width);
+
+    .count {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        justify-content: space-between;
+
+        .count-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
