@@ -1,0 +1,78 @@
+.mv-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .mv-item {
+        flex-basis: 24%;
+
+        .mv-pic {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all .5s;
+            cursor: pointer;
+
+            .ant-image {
+                position: relative;
+                width: 100%;
+                padding-top: 55%;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, .5);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &:hover .mv-title {
+                opacity: 1;
+            }
+
+            .mv-count {
+                position: absolute;
+                top: 2px;
+                right: 10px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+            }
+
+            .mv-title {
+                opacity: 0;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 35px;
+                line-height: 35px;
+                align-items: center;
+                color: #fff;
+                padding-left: 10px;
+                font-size: .9em;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: all .5s;
+            }
+        }
+
+        .mv-info {
+            .mv-name {
+                color: var(--text-color-gray);
+
+                &:hover {
+                    color: var(--text-active-color);
+                }
+            }
+
+            .mv-artists {
+                font-size: .9em;
+                color: var(--artist-color);
+            }
+        }
+    }
+}

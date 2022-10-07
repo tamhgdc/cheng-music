@@ -1,0 +1,93 @@
+@import url('~/styles/global.less');
+
+.base-info {
+    display: flex;
+
+    img {
+        width: 190px;
+        border-radius: 10px;
+        margin-right: 30px;
+    }
+
+    .base-des {
+        flex: 1;
+
+        .base-color {
+            color: var(--text-color-gray);
+        }
+
+        .info-title,
+        .info-author,
+        .info-tags,
+        .info-count,
+        .info-des {
+            display: flex;
+            align-items: center;
+            color: #373737;
+        }
+
+        .info-title {
+            .title-name {
+                margin-top: 0;
+            }
+
+            .info-tag {
+                color: var(--primary-color);
+                padding: 1px 4px;
+                margin-right: 10px;
+                border: 1px solid var(--primary-color);
+                border-radius: 3px;
+            }
+        }
+
+        .info-author {
+            margin: 14px 0;
+
+            a {
+                color: #769acb;
+                font-size: 12px;
+                margin: 0 5px;
+            }
+        }
+
+
+        // 标签
+        .info-tags {
+
+            a {
+                color: #769acb;
+                position: relative;
+                padding: 0 5px;
+
+                &:first-of-type {
+                    padding-left: 0;
+                }
+            }
+
+            i:not(:last-child) {
+                display: block !important;
+                font-size: 12px;
+            }
+        }
+
+        .info-count div:first-of-type {
+            margin-right: 5px;
+        }
+
+        /* 介绍 */
+        .info-des {
+            span {
+                align-self: flex-start;
+            }
+
+            div {
+                flex: 1;
+            }
+            .info-text {
+                .article-container(4);
+            }
+        }
+
+    }
+
+}

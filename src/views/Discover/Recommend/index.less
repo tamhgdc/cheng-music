@@ -1,0 +1,22 @@
+.recommend {
+    .ant-table {
+        .ant-table-thead {
+            display: none;
+        }
+
+        .ant-table-tbody {
+            min-width: var(--main-width);
+            display: flex;
+            flex-wrap: wrap;
+
+            .ant-table-row {
+                flex-basis: 50%;
+                overflow: hidden;
+
+                &:hover {
+                    background-color: #F2F2F3;
+                }    
+            }
+        }
+    }
+}

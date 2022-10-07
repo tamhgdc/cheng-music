@@ -1,0 +1,59 @@
+.official-cover {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .official-info {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            border-radius: 5px;
+        }
+
+        &:hover .play-cover {
+            display: flex;
+        }
+
+        .play-cover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+
+            .anticon-caret-right {
+                color: var(--primary-color);
+                font-size: 20px;
+            }
+        }
+
+        .official-update {
+            position: absolute;
+            color: #fff;
+            font-size: .9em;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .official-song {
+        flex: 1;
+
+        .ant-table-thead {
+            display: none;
+        }
+
+        .ant-table-tbody td {
+            padding: 18px 5px;
+            border-radius: 5px;
+        }
+    }
+}

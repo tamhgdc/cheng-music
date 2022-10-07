@@ -1,0 +1,41 @@
+/* 播放按钮 */
+.play-all {
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    width: 80px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* tab页样式 */
+.tabs {
+    display: flex;
+
+    .tabs-item {
+        margin-right: 25px;
+        cursor: pointer;
+        color: var(--text-color-gray);
+
+        &.active {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+    }
+}
+
+/* 多行显示省略号 */
+.article-container(@line: 2) {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    /* 需要显示的行数 */
+    -webkit-line-clamp: @line; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
